@@ -1,4 +1,5 @@
 Closures by Lizette Rodriguez
+
 **¿What is a closure? 
 Closures are functions that can access the lexical environment of their parent function. This means that they're nested. An identifying characteristic is that they keep the current value of the variables in the parent lexical environment even after they are done executing. 
 
