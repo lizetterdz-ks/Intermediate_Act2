@@ -4,8 +4,8 @@ Closures by Lizette Rodriguez
 Closures are functions that can access the lexical environment of their parent function. This means that they're nested. An identifying characteristic is that they keep the current value of the variables in the parent lexical environment even after they are done executing. 
 
 **Give me an example of closure. 
-function PostOffice(){\n
-  var MsgCount=0;
+function PostOffice(){
+var MsgCount=0;
   function SendMsg(msg){
     let msgsent="Message: "+msg;
     MsgCount++
