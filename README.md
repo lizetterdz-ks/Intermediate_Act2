@@ -4,6 +4,7 @@ Closures by Lizette Rodriguez
 Closures are functions that can access the lexical environment of their parent function. This means that they're nested. An identifying characteristic is that they keep the current value of the variables in the parent lexical environment even after they are done executing. 
 
 **Give me an example of closure. 
+
 function PostOffice(){
 var MsgCount=0;
   function SendMsg(msg){
@@ -41,6 +42,7 @@ console.log(ScrantonOffice("Hi, Angel!"))//Message: Hi, Angel! 2 Messages have b
 
 **Change var for let and explain why the logic is not affected
 The function still works because of the invocation placement despite the type of variable. Hoisting is not involved.
+
 function PostOffice(){
   function SendMsg(msg){
     let msgsent="Message: "+msg;
@@ -54,6 +56,7 @@ function PostOffice(){
 
 **Scope chain, an example of it, how many closures can we nest.
 Each nested function has a link to the lexical environment of its parent.
+
 function outer (name){
   let a="Welcome to JS closures, ";
   function inner(){
@@ -110,6 +113,7 @@ Data hiding is making variables unaccessible from the exterior of an object this
 
 **Give me an example of privacy with closures. 
 Here all 3 variables SentCount, ReceivedCount and ClientID are private because the exterior cannot corrupt them. This kind of information can be sensitive for keeping track of the operations handled in a post office and who made which operation.
+
 function PostOffice(){
   var SentCount=0;
   var ReceivedCount=0;
@@ -154,6 +158,7 @@ You're the #2 client
 
 **What happens if you create two counters with the same closure? 
 Every time a function is invoked to be executed a new execution context is created with its own new lexical environment, thus, each one has its own count. The newest one will act as if the function was reset.
+
 function PostOffice(){
   let MsgCount=0;
   function SendMsg(msg){
